@@ -1,0 +1,3 @@
+<design:component>
+	<design:attribute name="alertGroup" label="Alert Group" description="The alert group name that alerts should be displayed for." />
+</design:component>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>util</fullName>
+    <types>
+        <members>APIResult</members>
+        <members>AlertsHandler</members>
+        <members>AlertsHandlerTest</members>
+        <members>ApexLogger</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Alerts</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>Alert__c.Expiration_Date__c</members>
+        <members>Alert__c.Group_Name__c</members>
+        <members>Alert__c.Message__c</members>
+        <members>Alert__c.Persistent__c</members>
+        <members>Alert__c.Type__c</members>
+        <members>Apex_Log__c.Class_Name__c</members>
+        <members>Apex_Log__c.DML_Operation__c</members>
+        <members>Apex_Log__c.Date_Time_Stamp__c</members>
+        <members>Apex_Log__c.Error_Details__c</members>
+        <members>Apex_Log__c.Exception_Message__c</members>
+        <members>Apex_Log__c.Exception_Stack_Trace__c</members>
+        <members>Apex_Log__c.Exception_Type__c</members>
+        <members>Apex_Log__c.Method_Name__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Alert__c</members>
+        <members>Apex_Log__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Alert__c-Alert Layout</members>
+        <members>Apex_Log__c-Apex Error Log Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Alert__c.All</members>
+        <members>Apex_Log__c.All</members>
+        <name>ListView</name>
+    </types>
+    <version>48.0</version>
+</Package>

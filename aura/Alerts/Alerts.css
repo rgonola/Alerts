@@ -1,0 +1,32 @@
+.THIS .slds-icon_container {
+	line-height: 1.5em !important;
+}
+    
+.THIS .slds-icon_container .slds-icon-utility-error svg{
+	fill: #fff !important;
+}
+ 
+.THIS .slds-icon_container .slds-icon-utility-info svg{
+	fill: #fff !important;
+}
+
+.THIS .slds-alert_error .slds-notify__close .slds-icon_container svg{
+    fill: #fff !important;
+}
+
+.THIS .infoAlert .slds-notify__close .slds-icon_container svg{
+    fill: #fff !important;
+}
+
+.THIS .vertical-middle{
+	vertical-align: middle;  
+}
+
+.THIS.alertsContainer{
+	top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+    position: relative;
+ 	visibility: hidden;
+}
