@@ -28,7 +28,10 @@
                     }
                 }
                 // component.set("v.alerts", returnValue.Results);
+               
                 component.set("v.alerts", arrayElement);
+                console.log('alerts is '+JSON.stringify(component.get("v.alerts")));
+                component.set("v.displaymsg", true);
             }
 		});
     },
