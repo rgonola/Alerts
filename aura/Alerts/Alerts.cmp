@@ -1,17 +1,23 @@
-<aura:component implements="forceCommunity:availableForAllPageTypes" Controller = "AlertsHandler">
-	<aura:attribute name="alerts" type="List" />
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome" Controller = "AlertsHandler">
+    
+    
+    <aura:attribute name="alerts" type="List" />
     <aura:attribute name="alertGroup" type="string" />
-
+    <aura:attribute name="displaymsg" type="Boolean" default="false" />
+    
     <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
-		<div id="alertsContainer" class="alertsContainer">
+    
+    <aura:if isTrue="{!v.displaymsg == true}" >
+        <div style="slds">
+        <div id="alertsContainer" class="alertsContainer">
             <aura:iteration items="{!v.alerts}" var="alert">
-				<div class="{! 'slds-notify slds-notify_alert' + (alert.Type__c == 'warning' ? ' slds-alert_warning' : alert.Type__c == 'error' ? ' slds-alert_error' : ' infoAlert')}" role="alert" id="{!alert.Name}">
+                <div class="{!'slds-notify slds-notify_alert' + (alert.Type__c == 'warning' ? ' slds-alert_warning' : alert.Type__c == 'error' ? ' slds-alert_error' : ' infoAlert')}" role="alert" id="{!alert.Name}">
                     <span class="slds-assistive-text">{!alert.Type__c}</span>
                     <span class="slds-icon_container slds-m-right_x-small">
                         <lightning:icon class="slds-icon slds-icon slds-icon_small slds-icon-text-default" iconName="{! alert.Type__c == 'warning' ? 'utility:warning' : alert.Type__c == 'error' ? 'utility:error' : 'utility:info'}" size="x-small" alternativeText="icon" />
                     </span>
                     <h2>{!alert.Message__c}</h2>
-                    <aura:if isTrue="{! alert.Persistent__c == false}">
+                    <aura:if isTrue="{!alert.Persistent__c == false}">
                         <div class="slds-notify__close">
                             <button class="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse" title="Close" onclick="{!c.closeAlert}" data-alert-id="{!alert.Name}">
                                 <lightning:icon class="slds-icon slds-icon slds-icon_small slds-icon-text-default" iconName="utility:close" size="x-small" alternativeText="icon" />
@@ -19,7 +25,9 @@
                             </button>
                         </div>
                     </aura:if> 
-            	</div>       
-    		</aura:iteration>
+                </div>       
+            </aura:iteration>
         </div>
+        </div>
+    </aura:if>
 </aura:component>
